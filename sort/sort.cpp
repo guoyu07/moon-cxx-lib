@@ -9,3 +9,14 @@ void insertionsort(T data[], int n){
 		data[j] = tmp;
 	}
 }
+
+template<class T>
+void selectionsort(T data[], int n){
+	for (int i=0,j,least; i < n-1; i++){
+		for (j=i+1,least=i; j < n; j++){
+			if (data[j] < data[least])
+				least = j;
+		}
+		swap(data[least], data[i]);
+	}
+}
